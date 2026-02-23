@@ -1,0 +1,422 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000000; 
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* LINK */
+a {
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* LAYOUT CONTAINER */
+.container {
+    width: 92%;
+    max-width: 1400px; 
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 30px 0;
+    border-bottom: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: 700; 
+    letter-spacing: -0.5px; 
+}
+
+.nav-menu a {
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #888;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #fff;
+}
+
+
+.hero {
+    padding: 80px 0 40px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #888;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* GRID  */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    margin-bottom: 100px;
+}
+
+.card {
+    width: calc(20% - 24px); 
+    background-color: #0a0a0a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #111;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.view-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1c1c1e; 
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.view-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* DETAY SAYFASI */
+.detail-header {
+    display: flex;
+    gap: 40px;
+    padding: 60px 0;
+    align-items: flex-end;
+}
+
+.album-cover-large {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.track-meta h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.track-meta h2 {
+    font-size: 24px;
+    color: #aaa;
+    font-weight: 500;
+}
+
+.lyrics-container {
+    max-width: 700px;
+    font-size: 18px;
+    color: #ddd;
+    padding-bottom: 100px;
+}
+
+.genius-note {
+    background-color: #1c1c1e;
+    border-left: 4px solid #fff;
+    padding: 20px;
+    margin: 30px 0;
+    font-size: 15px;
+    color: #aaa;
+}
+
+.genius-note strong {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* FOOTER */
+.footer {
+    padding: 60px 0;
+    border-top: 1px solid #222;
+    text-align: center;
+    color: #666;
+}
+
+/* RESPONSIVE  */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; 
+    }
+    .detail-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+
+
+.brand {
+    display: flex;       
+    align-items: center; 
+}
+
+.brand img {
+   
+    height: 120px;       
+    width: auto;         
+    display: block;      
+}
+
+/* RESPONSIVE   */
+@media (max-width: 768px) {
+    .brand img {
+        height: 30px; 
+    }
+}
+/* --- CHARTS --- */
+
+.chart-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+/* Tablo Başlıkları  */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #666;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #222;
+}
+
+/* Sanatçı Satırı */
+.chart-row {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #1a1a1a; 
+    transition: background-color 0.2s ease;
+    cursor: pointer; 
+}
+
+/* Üzerine gelince parlasın  */
+.chart-row:hover {
+    background-color: #111;
+    border-radius: 8px;
+}
+
+/* Sıra Numarası  */
+.rank-num {
+    font-size: 24px;
+    font-weight: 800;
+    width: 40px; 
+    color: #444; 
+}
+
+.color-gold {
+    color: #FFD700; 
+}
+
+/* Sanatçı Alanı  */
+.artist-flex {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.chart-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.artist-meta h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Mavi Tik */
+.blue-tick {
+    color: #3498db; 
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Trend Okları  */
+.trend {
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+.trend.up { color: #2ecc71; } 
+.trend.down { color: #e74c3c; } 
+.trend.stable { color: #666; } 
+
+/* Dinleyici Sayısı */
+.listeners {
+    font-family: monospace; 
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* RESPONSIVE  */
+@media (max-width: 600px) {
+    .listeners, .list-header span:last-child {
+        display: none;
+    }
+    .chart-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    .rank-num {
+        font-size: 18px;
+        width: 25px;
+    }
+}
+/* --- FEATURED  --- */
+
+.news-item {
+    display: flex; 
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid #222; 
+}
+
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-image {
+    flex: 1; 
+}
+
+.news-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 8px;
+    filter: grayscale(100%); 
+    transition: filter 0.3s ease;
+}
+
+
+.news-item:hover .news-image img {
+    filter: grayscale(0%);
+}
+
+.news-content {
+    flex: 1.5; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news-tag {
+    color: #3498db; 
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.news-content h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.news-content p {
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.read-more {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* MOBİL UYUM  */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    
+    .news-image img {
+        height: 200px;
+    }
+}
